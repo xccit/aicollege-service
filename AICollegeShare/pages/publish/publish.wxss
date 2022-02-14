@@ -1,0 +1,115 @@
+/* pages/publish/publish.wxss */
+page {
+    background-color: #f5f5f5;
+    padding-top: 50px;
+}
+
+.tabarList {
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #4f60f8;
+    position: fixed;
+    top: 0px;
+    z-index: 999999;
+}
+
+.tabarListItemChoise {
+    background-color: #4f60f8;
+    color: #FFFFFF;
+}
+
+.tabarListItem {
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+    transition-duration: 0.1s;
+}
+
+.shopInputBox {
+    width: calc(100% - 10px);
+    margin: 10px auto;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.shopInputLable {
+    width: calc(100% - 10px);
+    height: 30px;
+    padding-left: 10px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #2c2c2c;
+}
+
+.shopInput {
+    width: 100%;
+    height: 50px;
+}
+
+.shopInput input {
+    width: calc(100% - 20px);
+    margin: 5px 5px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid #4f60f8;
+}
+
+.submitBox {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #4f60f8;
+    color: #FFFFFF;
+}
+
+.uploadImg {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    transition-duration: 0.3s;
+}
+@keyframes imgInput{
+    0%{
+        left: -100px;
+        opacity: 0;
+    }
+    100%{
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+.uploadIcon {
+    margin: 10px 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #4f60f8;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.uploadIcon image {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    transition-duration: 0.3s;
+    animation: imgInput 0.3s ease;
+    border-radius: 2px;
+}

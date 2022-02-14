@@ -1,0 +1,56 @@
+<view class="logo">
+    <view class="logoBox">
+        <image src="/images/wwzyxy.jpg" />
+    </view>
+    <view class="input">
+        <input type="text" placeholder="请输入商品名" bindtap="search" />
+        <image src="/images/search.png"></image>
+    </view>
+</view>
+<!-- {{showAlert}} -->
+<!-- Banner部分 -->
+<view class="banner">
+    <!-- banner轮播图 -->
+    <view class="banner-carousel">
+        <swiper indicator-dots="true" interval="3000" autoplay="true">
+            <block wx:for="{{swipImg}}" wx:key="{{swipImg}}">
+                <swiper-item>
+                    <image src="{{item.url}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>
+<!-- banner最新商品推荐列表 -->
+<view class="bar_title">推荐商品</view>
+
+<!-- 商品列表 -->
+<view class="shop_box">
+    <view class="shop_item" wx:for="{{commodityList}}" wx:key="item" bindtap="itemClick" data-id="{{item.shopId}}">
+        <view class="item_img">
+            <image src="{{item.image}}" mode="aspectFill"></image>
+        </view>
+        <view class="item_text">
+            <view class="item_title">
+                {{item.shopName}}
+            </view>
+            <view class="item_describe">
+                {{item.shopInfo}}
+            </view>
+            <!-- <view class="item_lables">
+                <view class="item_price">
+                ￥{{item.commodityPrice}}
+                </view>
+                <view class="item_lable">
+                    包邮
+                </view>
+                <view class="item_lable">
+                    双十一
+                </view>
+                <view class="item_lable">
+                    年终大促
+                </view>
+            </view> -->
+        </view>
+    </view>
+</view>

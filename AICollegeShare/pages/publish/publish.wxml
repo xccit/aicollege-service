@@ -1,0 +1,74 @@
+<!-- 发布 -->
+<view class="tabarList">
+    <view class="tabarListItem {{currIndex==index ? 'tabarListItemChoise' : ''}}" wx:for="{{tabList}}" wx:key="{{item}}" data-id="{{index}}" bindtap="labClick">{{item.title}}</view>
+</view>
+
+<view hidden="{{currIndex!=0}}">
+    <!-- 志愿活动 -->
+
+    <view class="shopInputBox">
+        <view class="shopInputLable">活动名称</view>
+        <view class="shopInput">
+            <input type="text" value="{{vol_name}}" name="vol_name" bindinput="vol_nameInput" id="vol_name" placeholder="活动名称" />
+        </view>
+    </view>
+
+
+
+    <view class="shopInputBox">
+        <view class="shopInputLable">志愿简介</view>
+        <view class="shopInput">
+            <input type="text" value="{{vol_info}}" name="vol_info" bindinput="vol_infoInput" id="vol_info" placeholder="志愿简介" />
+        </view>
+    </view>
+
+
+
+    <view class="submitBox" bindtap="submitBox">发布活动</view>
+
+
+
+</view>
+
+
+<view hidden="{{currIndex!=1}}">
+    <!-- 商品 -->
+    <view class="shopInputBox">
+        <view class="shopInputLable">商品名称</view>
+        <view class="shopInput">
+            <input type="text" value="{{shopTitle}}" name="shopName" bindinput="shopTitleBind" id="" placeholder="商品名称" />
+        </view>
+    </view>
+    <view class="shopInputBox">
+        <view class="shopInputLable">商品描述</view>
+        <view class="shopInput">
+            <input type="text" value="{{shopDescribe}}" name="describe" bindinput="shopDescribeBind" id="" placeholder="商品描述" />
+        </view>
+    </view>
+    <view class="shopInputBox">
+        <view class="shopInputLable">联系方式</view>
+        <view class="shopInput">
+            <input type="number" value="{{connection}}" name="connection" bindinput="connectionBind" id="" maxlength="11" placeholder="联系方式" />
+        </view>
+    </view>
+
+
+
+    <view class="shopInputBox">
+        <view class="shopInputLable">添加图片</view>
+        <view class="uploadImg">
+            <view class="uploadIcon">
+                <image src="../img/add.png" bindtap="chooseImg"></image>
+            </view>
+            <view class="uploadIcon" wx:for="{{imgArr}}" wx:key="{{item}}">
+                <image src="{{item}}" mode="aspectFill" bindlongtap="delete" bindtap="previewImage" data-index="{{index}}"></image>
+            </view>
+        </view>
+    </view>
+
+
+
+
+
+    <view class="submitBox" bindtap="submitBtn">提交</view>
+</view>

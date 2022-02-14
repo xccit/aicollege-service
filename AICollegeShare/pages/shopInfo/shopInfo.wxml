@@ -1,0 +1,83 @@
+<view class="luunboImg">
+    <swiper indicator-dots="true" interval="3000" autoplay="true" style="width:100%">
+        <block wx:for="{{imgArr}}" wx:key="{{item}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" mode="aspectFill" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<view class="shop_title">
+    <!-- <view class="shop_price">¥12.34</view> -->
+    <view class="shop_name">
+        {{title}}
+    </view>
+
+
+    <view class="shop_info">
+        {{info}}
+    </view>
+    <view class="shop_info">
+        来自：{{userName}}
+    </view>
+</view>
+
+
+<view class="shop_info_box" wx:for="{{imgArr}}" wx:key="{{item}}">
+    <image src="{{item}}" class="shop_info_img" mode="aspectFill"></image>
+</view>
+
+
+
+<!-- 其他推荐 -->
+
+<view class="title">精品好物</view>
+
+
+<view class="moreBox">
+    <view class="shop_item" wx:for="{{commodityList}}" wx:key="{{item}}" data-id="{{item.shopId}}" bindtap="shopInfo">
+        <view class="shop_mid">
+            <view class="shop_img">
+                <image mode="aspectFit" src="{{item.image}}"></image>
+            </view>
+            <view class="more_shop_title">
+                {{item.shopName}}
+            </view>
+            <view class="more_shop_info">{{item.shopInfo}}</view>
+        </view>
+    </view>
+</view>
+
+
+
+
+<view class="addShopCar">
+    <view class="addShopText">
+
+
+
+        <view class="addShopTextItem">
+            <view class="addShopTextItemImg">
+                <image src="../img/like.png"></image>
+            </view>
+            <view class="addShopTextItemText">收藏</view>
+        </view>
+
+
+        <view class="addShopTextItem" bindtap="connection">
+            <view class="addShopTextItemImg">
+                <image src="../img/conn.png"></image>
+            </view>
+            <view class="addShopTextItemText">联系卖家</view>
+        </view>
+
+
+
+
+
+    </view>
+    <view class="addShopBtn" bindtap="addCart">
+        加入购物车
+    </view>
+</view>

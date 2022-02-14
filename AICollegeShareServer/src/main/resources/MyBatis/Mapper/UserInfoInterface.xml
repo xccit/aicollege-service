@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.xccit.aicollege.mapping.UserInfoInterface">
+    <insert id="addUserInfo">
+        insert into users
+        values (#{user_id}, #{open_id}, #{user_name}, #{user_iconurl}, #{regiter_time})
+    </insert>
+    <update id="updateUserInfoByOpenid">
+        update users
+        set user_name    = #{user_name},
+            user_iconurl = #{user_iconurl}
+        where open_id = #{open_id}
+    </update>
+
+
+    <select id="getUserIdByOpenid" resultType="java.lang.Integer">
+        select user_id
+        from users
+        where open_id = #{userOpenid}
+    </select>
+    <select id="checkUserByOpenid" resultType="java.lang.String">
+        select open_id
+        from users
+        where open_id = #{openid}
+    </select>
+    <select id="getUserPublish" resultType="io.xccit.aicollege.dao.CommodityDao">
+        select comm_id,
+               comm_name,
+               comm_info,
+               comm_image,
+               comm_connectin
+        from commodity
+        where comm_publishmen = #{id}
+        order by comm_id desc
+
+    </select>
+</mapper>

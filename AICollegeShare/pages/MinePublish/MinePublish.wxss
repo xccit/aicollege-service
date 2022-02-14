@@ -1,0 +1,28 @@
+/* pages/MinePublish/MinePublish.wxss */
+@import "../index/index.wxss";
+page{
+    background-color: #f8f8f8;
+}
+
+.topBar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #FFFFFF;
+}
+.topBarItem {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+}
+
+.itemSelected{
+    height: calc(100% - 2px);
+    border-bottom: 2px solid #4f60f8;
+    color: #4f60f8;
+    transition-duration: 0.1s;
+}

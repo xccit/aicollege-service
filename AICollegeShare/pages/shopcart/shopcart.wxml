@@ -1,0 +1,46 @@
+<checkbox-group bindchange="checkboxChange">
+
+    <view class="shopCarItem" wx:for="{{cartData}}" wx:key="{{item}}" data-index="{{item.shopId}}" >
+        <view class="shop_check">
+            <checkbox value="1" checked="" />
+        </view>
+        <view class="shop_img" data-index="{{item.shopId}}"  bindtap="clickItem">
+            <image mode="center" src="{{item.image}}" mode="aspectFill"></image>
+        </view>
+        <view class="shop_text">
+            <view class="shop_title" data-index="{{item.shopId}}"  bindtap="clickItem">
+                {{item.shopName}}
+            </view>
+            <view class="shop_numBox">
+                <view class="shop_price_box">
+                    <!-- <view class="shop_price">￥12.345</view> -->
+                </view>
+                <view class="shop_num_box">
+                    <!-- <view class="shop_num">
+                        <view class="shop_free">-</view>
+                        <view class="shop_count">1</view>
+                        <view class="shop_add">+</view>
+                    </view> -->
+                    <view class="shop_delete" bindtap="deleteShopItem" data-index="{{item.shopId}}">
+                        <image src="../img/del.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</checkbox-group>
+
+<view class="get_money">
+    <view class="all_choice">
+        <checkbox value="1" checked="" />
+        全选
+    </view>
+    <view class="get_box">
+        <view class="get_box_text">
+            总价<view class="get_box_text_small">(不含税)</view>
+            ：<view class="get_box_text_small get_price">¥0.00</view>
+        </view>
+        <view class="get_box_btn">结算</view>
+    </view>
+</view>

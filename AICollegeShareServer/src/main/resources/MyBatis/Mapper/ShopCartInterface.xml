@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.xccit.aicollege.mapping.ShopCartInterface">
+
+
+    <insert id="addShopInShopCart">
+        insert into shopcart
+        values (0, #{comm_id}, #{user_id})
+    </insert>
+    <delete id="delteShopCartDataById">
+        delete
+        from shopcart
+        where comm_id = #{shopId}
+          and user_id = #{userId}
+    </delete>
+    <select id="checkChopCart" resultType="java.lang.Integer">
+        select count(*)
+        from shopcart
+        where user_id = #{userId}
+          and comm_id = #{shopId}
+    </select>
+    <select id="getShopCart" resultType="io.xccit.aicollege.dao.CommodityDao">
+        SELECT commodity.comm_id,
+               commodity.comm_name,
+               commodity.comm_info,
+               commodity.comm_image,
+               commodity.comm_connectin,
+               users.user_name,
+               users.user_id
+        FROM users
+                 JOIN shopcart ON shopcart.user_id = users.user_id
+                 JOIN commodity on commodity.comm_id = shopcart.comm_id
+        WHERE shopcart.user_id = #{userId}
+    </select>
+</mapper>

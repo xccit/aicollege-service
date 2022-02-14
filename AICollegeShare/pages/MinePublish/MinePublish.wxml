@@ -1,0 +1,27 @@
+<!--pages/MinePublish/MinePublish.wxml-->
+<view class="topBar">
+    <view class="topBarItem {{ index==currindex ? 'itemSelected' : '' }}" data-index="{{index}}" bindtap="clickItem" wx:for="{{topbar}}" wx:key="{{item}}">
+        {{item}}
+    </view>
+</view>
+
+<view class="published" hidden="{{currindex!=0}}">
+
+
+    <!-- 商品列表 -->
+    <view class="shop_box">
+        <view class="shop_item" wx:for="{{publish}}" wx:key="item" bindtap="itemClick" data-id="{{item.commId}}">
+            <view class="item_img">
+                <image src="{{item.commImage}}" mode="aspectFill"></image>
+            </view>
+            <view class="item_text">
+                <view class="item_title">
+                    {{item.commName}}
+                </view>
+                <view class="item_describe">
+                    {{item.commInfo}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

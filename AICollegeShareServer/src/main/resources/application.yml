@@ -1,0 +1,29 @@
+mybatis:
+  config-location: classpath:MyBatis/Config/MyBatisConfig.xml
+  mapper-locations: classpath:MyBatis/Mapper/*.xml
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/AICollageServices?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    mvc:
+      servlet:
+        load-on-startup: 1
+  redis:
+    url:redis://:@127.0.0.1:6379
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+  port: 465

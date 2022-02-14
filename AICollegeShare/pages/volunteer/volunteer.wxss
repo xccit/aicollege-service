@@ -1,0 +1,57 @@
+page{
+    background-color: #eeeeee;
+}
+
+.volunteerItem {
+    width: calc(100% - 20px);
+    height: auto;
+    position: relative;
+    left: 10px;
+    margin-top: 10px;
+    display: inline-table;
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.volunteerUserInfo {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.userImg {
+    width: 50px;
+    height: 50px;
+}
+.userImg image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+.UserNicname {
+    width: calc(100% - 60px);
+    height: 50px;
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.volunteerTitle {
+    width: calc(100% - 50px);
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #4f60f8;
+}
+.volunteerInfo {
+    width: calc(100% - 50px);
+    height: auto;
+    float: right;
+    color: #00000090;
+    font-size: 14px;
+}

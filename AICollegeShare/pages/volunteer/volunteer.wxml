@@ -1,0 +1,18 @@
+<view class="volunteerItem" wx:for="{{volunteer}}" wx:key="{{item}}">
+    <view class="volunteerUserInfo">
+        <view class="userImg">
+            <image src="{{item.userIcon}}"></image>
+        </view>
+        <view class="UserNicname">
+            {{item.volName}}
+        </view>
+    </view>
+
+    <!-- <view class="volunteerTitle">
+        {{item.volName}}
+
+    </view> -->
+    <view class="volunteerInfo">
+        {{item.volInfo}}
+    </view>
+</view>

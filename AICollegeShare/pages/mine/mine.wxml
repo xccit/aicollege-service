@@ -1,0 +1,96 @@
+<view class="mine_box" hidden="{{!loginStaus}}">
+  <view class="mine_img">
+    <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="mine_text">
+    <view class="mine_nickname">{{userInfo.nickName}}</view>
+    <view class="mine_other">
+      <view class="mine_sex">
+        <image wx:if="{{userInfo.gender==0}}" src="../img/0.png"></image>
+        <image wx:if="{{userInfo.gender==1}}" src="../img/1.png"></image>
+      </view>
+      <view class="mine_btn">
+        <button bindtap="userLogin">更新资料</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="mine_box" hidden="{{loginStaus}}">
+  <button class="mine_loginBox" bindtap="userLogin">登录</button>
+</view>
+
+
+<view class="state">
+
+
+  <view class="state_item" bindtap="MinePublish">
+    <view class="state_image">
+      <image src="../img/wait_pay.png"></image>
+    </view>
+    <view class="state_text">
+      已发布
+    </view>
+  </view>
+  <view class="state_item">
+    <view class="state_image">
+      <image src="../img/send_it.png"></image>
+    </view>
+    <view class="state_text">
+      已参加
+    </view>
+  </view>
+  <view class="state_item">
+    <view class="state_image">
+      <image src="../img/finished.png"></image>
+    </view>
+    <view class="state_text">
+      已购买
+    </view>
+  </view>
+  <view class="state_item">
+    <view class="state_image">
+      <image src="../img/wait_comment.png"></image>
+    </view>
+    <view class="state_text">
+      建议
+    </view>
+  </view>
+</view>
+
+<!-- <view class="set_item">
+  <view class="set_item_box">
+    <view class="set_item_img">
+      <image src="../img/services.png"></image>
+    </view>
+    <view class="set_item_text">客服</view>
+  </view>
+</view>
+
+<view class="set_item">
+  <view class="set_item_box">
+    <view class="set_item_img">
+      <image src="../img/set.png"></image>
+    </view>
+    <view class="set_item_text">设置</view>
+  </view>
+</view> -->
+
+<!-- 其他推荐 -->
+
+<view class="title">精品好物</view>
+
+
+<view class="shop_item" wx:for="{{commodityList}}" wx:key="{{item}}" data-id="{{item.shopId}}" bindtap="shopItem">
+  <view class="shop_mid">
+    <view class="shop_img">
+      <image mode="center" src="{{item.image}}" mode="aspectFit"></image>
+    </view>
+    <view class="shop_price">
+      {{item.shopName}}
+    </view>
+    <view class="shop_title">{{item.shopInfo}}</view>
+  </view>
+</view>
+
+
