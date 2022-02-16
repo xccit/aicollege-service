@@ -1,4 +1,6 @@
-# AICollegeService
+
+
+AICollegeService
 
 #### 介绍
 使用微信小程序+SpringBoot开发 数据库使用了MySQL 方便校园二手交易及各种志愿活动发布 
@@ -31,7 +33,9 @@ java -jar AICollegeShareServer-1.0-SNAPSHOT.jar
 
 #### 使用说明
 
-1. 首页：<img src="README.assets/image-20220216165313461.png" alt="image-20220216165313461" style="zoom:50%;" />
+1. 首页：
+
+   <img src="README.assets/image-20220216165313461.png" alt="image-20220216165313461" style="zoom:50%;" />
 
    首页在上方展示武威职业学院LOGO 右侧搜索框搜索功能暂未实现
 
@@ -41,7 +45,11 @@ java -jar AICollegeShareServer-1.0-SNAPSHOT.jar
 
    在此页面中点击加入购物车便会加入到购物车，方便下次查找;点击联系卖家，便会弹出卖家联系方式，所有商品交易都是以线下交易的方式完成，平台不承担任何责任。
 
-2. 购物车:<img src="README.assets/image-20220216165522885.png" alt="image-20220216165522885" style="zoom:50%;" />
+2. 购物车:
+
+   
+
+   <img src="README.assets/image-20220216165522885.png" alt="image-20220216165522885" style="zoom:50%;" />
 
    如果没有进行登录操作 购物车就会提示你去登录 在登录成功之后会显示自己添加进购物车的商品
 
@@ -49,20 +57,24 @@ java -jar AICollegeShareServer-1.0-SNAPSHOT.jar
 
    这是登录成功之后购物车会展示的页面
 
-3. 发布：<img src="README.assets/image-20220216165759618.png" alt="image-20220216165759618" style="zoom:50%;" />
+3. 发布：
+
+   <img src="README.assets/image-20220216165759618.png" alt="image-20220216165759618" style="zoom:50%;" />
 
    <img src="README.assets/image-20220216165826428.png" alt="image-20220216165826428" style="zoom:50%;" />
 
    发布页展示如上图所示:上方选择发布商品或者志愿活动，在下方输入框及图片上传位置填入相应信息即可。
 
-   4.志愿活动:<img src="README.assets/image-20220216170105671.png" alt="image-20220216170105671" style="zoom:50%;" />
+   4.志愿活动:
+
+   <img src="README.assets/image-20220216170105671.png" alt="image-20220216170105671" style="zoom:50%;" />
 
    在此页面会展示已经发布的志愿活动信息。
 
    5.我的:
 
    <img src="README.assets/image-20220216170513001.png" alt="image-20220216170513001" style="zoom:50%;" />
-
+   
    次页面可以进行登录、个人资料更新、查看已发布的商品等操作。已参加、已购买、建议等功能暂未实现。
-
+   
    
